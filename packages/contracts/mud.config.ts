@@ -8,12 +8,31 @@ export default mudConfig({
     },
   },
   tables: {
-    Counter: {
-      schema: {
-        value: "uint32",
+    Garage: {
+	schema: {
+        value: "boolean",
       },
       storeArgument: true,
     },
+	Tenent: {
+      schema: {
+        GarageAddress: "address",
+      },
+      storeArgument: true,
+    },
+	Position: {
+      schema: {
+        x: "uint32",
+		y: "uint32",
+      },
+      storeArgument: true,
+    },
+	Cluster: {
+      schema: {
+        id: "uint32",
+      },
+      storeArgument: true,
+    }
   },
   modules: [
     {
